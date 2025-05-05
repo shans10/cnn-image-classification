@@ -1,0 +1,9 @@
+services:
+  jupyter:
+    build: .
+    container_name: jupyterlab
+    command: jupyter-lab --ip=0.0.0.0 --no-browser --NotebookApp.token='' --allow-root
+    ports:
+      - "8888:8888"
+    volumes:
+      - .:/code     
